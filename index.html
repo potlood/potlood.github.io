@@ -2,7 +2,13 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <link rel="icon" type="image/png" href="./logo.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
         <title>Potlood - Open Office viewer</title>
         <script src="./lib/jszip/dist/jszip.min.js"></script>
         <script src="./lib/utif/UTIF.js"></script>
@@ -22,7 +28,9 @@
         </script>
     </head>
     <body style="background-color: #8a8a8a;">
-        <div id="content" style="margin: auto; width: 100%; background-color: #ffffff;">
+        <div id="container" style="text-align: center">
+            <div id="content" style="width: 1000px; background-color: #ffffff; display: inline-block; text-align: left">
+            </div>
         </div>
     </body>
 </html>
