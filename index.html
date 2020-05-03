@@ -10,14 +10,15 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
         <title>Potlood - Open Office viewer</title>
-        <script src="./lib/jszip/dist/jszip.min.js"></script>
-        <script src="./lib/utif/UTIF.js"></script>
-        <script src="./lib/rtf.js/dist/EMFJS.bundle.min.js"></script>
-        <script src="./lib/rtf.js/dist/WMFJS.bundle.min.js"></script>
+        <script src="./lib/jszip.min.js"></script>
+        <script src="./lib/UTIF.js"></script>
+        <script src="./lib/EMFJS.bundle.min.js"></script>
+        <script src="./lib/WMFJS.bundle.min.js"></script>
+        <script src="./lib/potlood.min.js"></script>
         <script>
-            import('./lib/potlood.js').then(module => {
+            function loadFile() {
                 var content = document.getElementById("content");
-                var potlood = new module.Potlood(content);
+                var potlood = new Potlood.Potlood(content);
                 var url = '';
                 var docName = '';
                 if (location.search) {
@@ -30,10 +31,10 @@
                 }
                 potlood.loadDocxFromUrl(url);
                 document.title = docName + " - Potlood";
-            })
+            }
         </script>
     </head>
-    <body style="background-color: #8a8a8a;">
+    <body style="background-color: #8a8a8a;" onload="loadFile();">
         <div id="container" style="text-align: center">
             <div id="content" style="background-color: #ffffff; display: inline-block; text-align: left">
             </div>
